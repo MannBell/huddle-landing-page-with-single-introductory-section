@@ -1,0 +1,224 @@
+/*Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/*Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+
+:root {
+  box-sizing: border-box;
+  /* COLORS */
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  /* WEIGHTS */
+  --regular-font: 400;
+  --bold-font: 600;
+  /* SIZES */
+  --size-a: .5em;
+  --size-b: 2.5em;
+  --size-c: 3em;
+  --size-d: 4em;
+
+  --mobile-body-H-padding: var(--size-b);
+  --mobile-body-V-padding: 2.375em;
+  --desktop-body-H-padding: 5em;
+  --desktop-body-V-padding: var(--size-b);
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--regular-font);
+  text-align: center;
+  padding: var(--mobile-body-V-padding) var(--mobile-body-H-padding);
+  line-height: 1.4;
+  color: #fff;
+  background: url(./images/bg-mobile.svg), var(--violet);
+  background-position: top 0 center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+body * {
+  font-family: inherit;
+}
+
+@media only screen and (min-width: 24em) {
+  body {
+    background: url(./images/bg-desktop.svg), var(--violet);
+    background-repeat: no-repeat;
+  }  
+}
+
+@media only screen and (min-width: 68em) {
+  body {
+    padding: var(--desktop-body-V-padding) var(--desktop-body-H-padding);
+    text-align: initial;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }  
+}
+
+.logo {
+  height: 1.5em;
+  text-align: initial;
+}
+
+@media only screen and (min-width: 68em) {
+  .logo {
+    height: var(--size-b);
+    margin-bottom: 6.25em;
+  }
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+main {
+  max-width: 35em;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 68em) {
+  main {
+    display: flex;
+    max-width: initial;
+  }
+}
+
+.mockup {
+  margin: var(--size-d) auto;
+  max-width: 20em;
+}
+
+@media only screen and (min-width: 68em) {
+  .mockup {
+    margin: initial;
+    margin-right: 3.25em;
+    flex: 1 1 55%;
+    max-width: initial;
+  }
+}
+
+@media only screen and (min-width: 68em) {
+  .main__text {
+    flex: 1 1 45%;
+    margin-top: var(--size-c);
+  }
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+}
+
+.description {
+  margin: 1.25em 0;
+}
+
+@media only screen and (min-width: 68em) {
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+.title {
+  font-weight: var(--bold-font);
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 68em) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.button {
+  --button-color: #fff;
+  font-size: 1rem;
+  border: initial;
+  border-radius: var(--size-c);
+  background: var(--button-color);
+  color: var(--violet);
+  width: 12.5em;
+  height: var(--size-b);
+  margin-bottom: var(--size-d);
+  cursor: pointer;
+  box-shadow: 0 .2em var(--size-a) #0007;
+}
+
+@media only screen and (min-width: 68em) {
+  .button {
+    height: 3.5em;
+    margin-bottom: initial;
+  }
+  .button:hover {
+    --button-color: var(--soft-magenta);
+    color: #fff;
+  }
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 68em) {
+  .social-media {
+    justify-content: flex-end;
+  }  
+}
+
+.social-media-link {
+  --social-media-size: 1.75em;
+  --link-color: #fff;
+  width: var(--social-media-size);
+  height: var(--social-media-size);
+  color: var(--link-color);
+  text-decoration: initial;
+  border: 1px solid var(--link-color);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 68em) {
+  .social-media-link {
+    --social-media-size: var(--size-b);
+  }
+  .social-media-link:hover {
+    --link-color: var(--soft-magenta);
+  }
+}
+
+.social-media-link + .social-media-link {
+  margin-left: var(--size-a);
+}
+
+@media only screen and (min-width: 68em) {
+  .social-media-link + .social-media-link {
+    margin-left: 1em;
+  }
+}
+
+a i {
+  font-size: .9rem;
+}
+
+@media only screen and (min-width: 68em) {
+  a i {
+    font-size: 1rem;
+  } 
+}
